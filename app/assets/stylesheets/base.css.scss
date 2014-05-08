@@ -1,0 +1,63 @@
+
+/* //////////////// navbar ///////////////// */
+#companyName {
+  max-width:300px;
+}
+
+.navbar-nav {
+  float: right;
+  li {
+    display: inline;
+  }
+}
+.navbar-brand {
+  padding-left: 0px;
+}
+
+#home-hero {
+  margin-top: 42px;
+}
+
+.admin-dashboard {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 50px;
+  margin: 0 auto;
+  background-color: #F8F8F8;
+  border-top: 1px solid gray;
+  padding: 20px 0;
+  ul {
+    width: 1200px;
+    margin: 0 auto;
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0px 50px 0px 0; 
+    }
+  }
+}
+
+.navbar .container {
+  width: 1200px;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding-bottom: 200px;
+}
+
+ul li {
+  list-style: none;
+
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background-color: gray;
+}

@@ -1,0 +1,12 @@
+<h1>Satisfied Clients</h1>
+<% @clients.each do |c| %>
+<ul>
+  <li class=".col-md-4">
+    <ul>
+      <li><h2><%= c.name %></h2></li>
+      <li><p><%= c.tag %></p></li>
+      <li><img src="<%= c.logo_url %>"></li>
+    </ul>
+  </li>
+</ul>
+<% end %>

@@ -1,0 +1,15 @@
+
+<h1>Services Provided by American Telecom</h1>
+<% @services.each do |s| %>
+<ul>
+  <li><%= s.description %></li>
+</ul>
+<% end %>
+
+<h1>Additional Services Provided by American Telecom</h1>
+<% @additional_services.each do |s| %>
+<ul>
+  <li><%= s.description %></li>
+</ul>
+<% end %>
+
