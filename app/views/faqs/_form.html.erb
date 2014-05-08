@@ -1,0 +1,10 @@
+<%= form_for @faq do |f| %>
+<div class="form-inline">
+  <div class="form-group col-xs-12">
+    <%= f.text_field :question, class: "form-control", placeholder: "Add the question here" %>
+    <%= f.text_field :answer, class: "form-control", placeholder: "Add the answer here" %>
+  </div>
+</div>
+<%= f.submit class: "btn btn-primary" %>
+
+<% end %>

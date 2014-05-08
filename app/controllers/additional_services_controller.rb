@@ -15,14 +15,10 @@ class AdditionalServicesController < ApplicationController
 
   def update
     @additional_service = AdditionalService.find(params[:id])
-    respond_to do |format|
-      if @additional_service.update_attributes(additional_service_params)
-        format.html { redirect_to additional_service_path, notice: 'additional service was successfully updated.' }
-        format.js
-      else
-        format.html { render action: "edit" }
-        format.js
-      end
+    if @additional_service.update_attributes(additional_service_params)
+      redirect_to services_path
+    else
+      render :edit
     end
   end
 

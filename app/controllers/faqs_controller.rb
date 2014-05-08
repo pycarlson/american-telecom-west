@@ -18,7 +18,12 @@ class FaqsController < ApplicationController
   end
 
   def update
-
+    @faq = Faq.find(params[:id])
+    if @faq.update_attributes(faq_params)
+      redirect_to faqs_path
+    else
+      render :edit
+    end
   end
 
   def destroy
