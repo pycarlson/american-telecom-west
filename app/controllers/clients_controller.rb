@@ -10,6 +10,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.create!(client_params)
+    redirect_to clients_path
   end
 
   def edit
@@ -30,7 +31,7 @@ class ClientsController < ApplicationController
   private
 
   def client_params
-    params.require(:clients).permit(:name, :logo_url, :tag)
+    params.require(:client).permit(:name, :logo_url, :tag)
   end
 
 end 

@@ -10,6 +10,7 @@ class FaqsController < ApplicationController
 
   def create
     @faq = Faq.create!(faq_params)
+    redirect_to faqs_path
   end
 
   def edit
@@ -31,7 +32,7 @@ class FaqsController < ApplicationController
   private
 
   def faq_params
-    params.require(:faqs).permit(:question, :answer)
+    params.require(:faq).permit(:question, :answer)
   end
 
 end 

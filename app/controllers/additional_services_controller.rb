@@ -6,6 +6,7 @@ class AdditionalServicesController < ApplicationController
 
   def create
     @additional_service = AdditionalService.create!(additional_service_params)
+    redirect_to services_path
   end
 
   def edit
@@ -35,8 +36,8 @@ class AdditionalServicesController < ApplicationController
 
   private
 
-  def additional_services_params
-    params.require(:additional_services).permit(:description)
+  def additional_service_params
+    params.require(:additional_service).permit(:description)
   end
 
 end 

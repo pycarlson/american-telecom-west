@@ -11,6 +11,7 @@ class ServicesController < ApplicationController
 
   def create
     @service = Service.create!(service_params)
+    redirect_to services_path
   end
 
   def edit
@@ -40,7 +41,7 @@ class ServicesController < ApplicationController
 
   private
 
-  def services_params
-    params.require(:services).permit(:description)
+  def service_params
+    params.require(:service).permit(:description)
   end
 end 
