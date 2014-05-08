@@ -22,7 +22,7 @@ class FaqsController < ApplicationController
   end
 
   def destroy
-    Faq.find(params[:id])
+    Faq.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to faqs_path }
       format.js

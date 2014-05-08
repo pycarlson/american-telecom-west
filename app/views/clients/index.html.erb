@@ -1,11 +1,13 @@
 <h1>Satisfied Clients</h1>
 <% @clients.each do |c| %>
 <ul>
-  <li class=".col-md-4">
+  <li class="col-md-4">
     <ul>
-      <li><h2><%= c.name %></h2></li>
-      <li><p><%= c.tag %></p></li>
-      <li><img src="<%= c.logo_url %>"></li>
+      <h2><%= c.name %></h2>
+      <p><%= c.tag %></p>
+      <img src="<%= c.logo_url %>">
+      <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
+      <%= link_to "Edit", edit_client_path(c), class: "edit_link", remote: true %></li>
     </ul>
   </li>
 </ul>

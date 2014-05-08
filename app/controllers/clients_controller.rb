@@ -21,7 +21,7 @@ class ClientsController < ApplicationController
   end
 
   def destroy
-    Client.create!(params[:id])
+    Client.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to clients_path }
       format.js

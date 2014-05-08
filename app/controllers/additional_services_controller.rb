@@ -27,7 +27,7 @@ class AdditionalServicesController < ApplicationController
   end
 
   def destroy
-    AdditionalService.create!(params[:id])
+    AdditionalService.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to additional_services_path }
       format.js

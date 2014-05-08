@@ -2,14 +2,20 @@
 <h1>Services Provided by American Telecom</h1>
 <% @services.each do |s| %>
 <ul>
-  <li><%= s.description %></li>
+  <li>
+    <%= s.description %>
+    <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+    <%= link_to "Edit", edit_service_path(s), class: "edit_link", remote: true %>
+  </li>
 </ul>
 <% end %>
 
 <h1>Additional Services Provided by American Telecom</h1>
-<% @additional_services.each do |s| %>
+<% @additional_services.each do |as| %>
 <ul>
-  <li><%= s.description %></li>
-</ul>
-<% end %>
+  <li><%= as.description %>
+    <%= link_to "Delete", as, method: :delete, class: "delete_link", remote: true %>
+    <%= link_to "Edit", edit_additional_service_path(as), class: "edit_link", remote: true %></li>
+  </ul>
+  <% end %>
 

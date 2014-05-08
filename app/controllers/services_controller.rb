@@ -32,7 +32,9 @@ class ServicesController < ApplicationController
   end
 
   def destroy
-    Service.create!(params[:id])
+    Service.destroy(params[:id])
+    puts "#{params[:id]}"
+    p "*" * 100
     respond_to do |format|
       format.html { redirect_to services_path }
       format.js
