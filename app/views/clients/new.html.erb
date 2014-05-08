@@ -1,0 +1,13 @@
+
+<%= form_for @client do |f| %>
+<h2>Add a New Client</h2>
+<div class="form-inline">
+  <div class="form-group col-xs-12">
+    <%= f.text_field :name, class: "form-control", placeholder: "Client Name" %>
+    <%= f.text_field :tag, class: "form-control", placeholder: "Client Tag Name" %>
+    <%= f.text_field :logo_url, class: "form-control", placeholder: "Add path to the client's logo here" %>
+  </div>
+</div>
+<%= f.submit class: "btn btn-primary" %>
+
+<% end %>
