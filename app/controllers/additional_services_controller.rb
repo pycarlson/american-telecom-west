@@ -1,5 +1,6 @@
 class AdditionalServicesController < ApplicationController
-
+  before_filter :is_admin?, except: [:index]
+  
   def new
     @additional_service = AdditionalService.new
   end

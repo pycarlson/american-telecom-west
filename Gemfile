@@ -14,9 +14,9 @@ gem 'nested_form'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 gem 'simple_form'
-gem "activerecord-tableless", "~> 1.0"
+gem 'activerecord-tableless', '~> 1.0'
 gem 'google_drive'
-gem "figaro"
+gem 'figaro'
 
 group :development do
   gem 'sqlite3'

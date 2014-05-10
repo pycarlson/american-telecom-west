@@ -1,4 +1,5 @@
 class ClientsController < ApplicationController
+  before_filter :is_admin?, except: [:index]
   
   def index 
     @clients = Client.all

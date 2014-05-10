@@ -6,8 +6,12 @@
       <h2><%= c.name %></h2>
       <p><%= c.tag %></p>
       <img src="<%= c.logo_url %>">
+
+      <%if user_signed_in? && is_admin? %>
       <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
       <%= link_to "Edit", edit_client_path(c), class: "edit_link" %></li>
+      <% end %>
+      
     </ul>
   </li>
 </ul>

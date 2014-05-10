@@ -9,9 +9,9 @@
 <body>
   <%= render 'shared/top_nav' %>
   
-<div class="main-container">
+  <div class="main-container">
 
-  <% if flash[:notice] %>
+    <% if flash[:notice] %>
     <p class="alert alert-info"><%= notice %></p>
     <% end %>
     <% if flash[:alert] %>
@@ -26,9 +26,11 @@
     </ul>
     <% end %>
 
-<%= yield %>
-</div>
+    <%= yield %>
+  </div>
+  <%if user_signed_in? && is_admin? %>
   <%= render 'shared/admin' %>
-<div class="footer"></div>
+  <% end %>
+  <div class="footer"></div>
 </body>
 </html>
