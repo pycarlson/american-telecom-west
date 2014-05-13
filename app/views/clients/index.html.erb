@@ -1,18 +1,16 @@
 <h1>Satisfied Clients</h1>
+
+<ul id="customer-list" class="clearfix center-block col-xs-12">
 <% @clients.each do |c| %>
-<ul>
-  <li class="col-md-4">
-    <ul>
+  <li class="col-sm-4 col-xs-6">
+     <img src="<%= c.logo_url %>">
       <h2><%= c.name %></h2>
       <p><%= c.tag %></p>
-      <img src="<%= c.logo_url %>">
 
       <%if user_signed_in? && is_admin? %>
       <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
       <%= link_to "Edit", edit_client_path(c), class: "edit_link" %></li>
       <% end %>
-      
-    </ul>
   </li>
-</ul>
 <% end %>
+</ul>
