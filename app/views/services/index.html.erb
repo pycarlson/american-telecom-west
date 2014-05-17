@@ -1,7 +1,7 @@
-
+<div class="container" id="services-page">
 <h1>Services Provided by American Telecom</h1>
-<% @services.each do |s| %>
-<ul>
+<ul class="col-xs-12">
+  <% @services.each do |s| %>
   <li>
     <%= s.description %>
 
@@ -11,12 +11,12 @@
     <% end %>
 
   </li>
+<% end %>  
 </ul>
-<% end %>
 
 <h1>Additional Services Provided by American Telecom</h1>
-<% @additional_services.each do |as| %>
-<ul>
+<ul class="col-xs-12">
+  <% @additional_services.each do |as| %>
   <li><%= as.description %>
     
     <%if user_signed_in? && is_admin? %>
@@ -25,6 +25,8 @@
     <% end %>
 
   </li>
-</ul>
 <% end %>
+</ul>
+
+</div>
 
