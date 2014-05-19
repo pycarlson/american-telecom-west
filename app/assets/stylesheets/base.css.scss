@@ -93,8 +93,14 @@ ul li {
 
 .btn-primary {
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.65);
-    border-color: #0879DA;
-    color: #0879DA;
+    border-color: #444;
+    color: #444;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+    background-color: #fde547;
+    border-color: #444;
+    color: #444;
 }
 
 .footer {
@@ -105,6 +111,11 @@ ul li {
   background-color: gray;
 }
 
+
+h1{
+  background-color:#fde547;
+  clear:both;
+}
 
 /* //////////////// homepage ///////////////// */
 
@@ -183,7 +194,14 @@ box-shadow: 0 3px 12px 2px rgba(0,0,0,.35);
      width:90%;
      }
 
+     li:last-of-type{
+     border-bottom:none;
+     }
+
   }
 
 
 }
+
+
+/* //////////////// admin pages ///////////////// */
