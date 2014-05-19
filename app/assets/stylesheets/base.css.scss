@@ -1,3 +1,29 @@
+@media (max-width: 610px){
+  
+  #homepage-sections{
+   img{
+      display:block !important;
+      float:none !important;
+      margin:0 auto !important;
+      text-align:center !important;
+      } 
+
+  }
+
+     #homepage-sections > div {
+      margin-top:50px !important;
+      height:auto !important;
+
+      div {
+      float:none;
+      margin: 0 auto;
+      text-align:center;
+        }
+    } 
+
+}
+
+
 
 /* //////////////// navbar ///////////////// */
 #companyName {
@@ -86,7 +112,8 @@ ul li {
   background: url('/assets/homepageSlide_small.jpg') no-repeat center top;
   min-height:500px;
   margin-top:-25px;
-  margin-bottom:50px;
+-webkit-box-shadow: 0 3px 12px 2px rgba(0,0,0,.35);
+box-shadow: 0 3px 12px 2px rgba(0,0,0,.35);
 }
 
 .jumbotron{
@@ -94,32 +121,46 @@ ul li {
 }
 
 #homepage-sections{
-    padding-top:10px;
+    height:860px;
+    background: url('/assets/homepage_background.png') no-repeat center center;
 
-    h3{
-      margin:0;
-      text-align:center;
+    h2{
+      color: #FFFFFF;
+      display:inline-block;
+      text-align:left;
       }
 
      img{
-     border: solid 2px #0879DA;
-     display:block;
-     margin:0 auto;
+     border: solid 2px #fff;
+     float:left;
+     margin-top:2%;
      } 
 
 }
 
 #homepage-sections > div{
-cursor:pointer;
-  padding-bottom:35px;
+    cursor:pointer;
+    height: 150px;
+    position: relative;
+    margin-top: 100px;
+
+      div{padding-left: 20px;}
 }
 
 /* //////////////// customer list page ///////////////// */
+
+#clients-page{
+  h1 {padding-left:15px}
+}
+
 #customer-list{
   
   li{
-  height:300px;
+  height:250px;
+  line-height:1.1;
   overflow:hidden;
+
+    div{bottom:2px;}
 
     img{max-height:150px;}
   }

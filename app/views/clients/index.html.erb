@@ -1,12 +1,14 @@
+<div class="container" id="clients-page">
 <h1>Satisfied Clients</h1>
 
 <ul id="customer-list" class="clearfix center-block col-xs-12">
 <% @clients.each do |c| %>
-  <li class="col-sm-4 col-xs-6">
-     <img src="<%= c.logo_url %>">
-      <h2><%= c.name %></h2>
-      <p><%= c.tag %></p>
-
+  <li class="col-sm-3 col-xs-6">
+     <img class="img-responsive" src="<%= c.logo_url %>">
+     <div>
+     	 <h3><%= c.name %></h3>
+      	<p><%= c.tag %></p>
+      </div>
       <%if user_signed_in? && is_admin? %>
       <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
       <%= link_to "Edit", edit_client_path(c), class: "edit_link" %></li>
@@ -14,3 +16,4 @@
   </li>
 <% end %>
 </ul>
+</div>

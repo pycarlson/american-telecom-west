@@ -7,41 +7,40 @@
 	</div>
 </div>
 
-<div id="homepage-sections" class="clearfix">
-	<div class="col-sm-4"  data-toggle="modal" data-target=".san-francisco-modal">
-		<img class="img-circle" src="assets/sf_thumb.jpg">
-		<h3>San Francisco</h3>
-	</div>
-	<!-- Small modal -->
+
+<!-- Small modal -->
 	<div class="modal fade san-francisco-modal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-body">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title" id="myModalLabel">San Francisco</h4>
-				</div>
-				<div class="modal-body">
 					info goes here
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- /small modal -->
-
-
-	<div class="col-sm-4" data-toggle="modal" data-target=".los-angeles-modal">
-		<img class="img-circle" src="assets/la_thumb.jpg">
-		<h3>Los Angeles</h3>
-	</div>
 	<!-- Small modal -->
 	<div class="modal fade los-angeles-modal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
-				<div class="modal-header">
+				<div class="modal-body">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					<h4 class="modal-title" id="myModalLabel">Los Angeles</h4>
+					info goes here
 				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /small modal -->
+<!-- Small modal -->
+	<div class="modal fade boise-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
 				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Boise</h4>
 					info goes here
 				</div>
 			</div>
@@ -49,23 +48,30 @@
 	</div>
 	<!-- /small modal -->
 
-	<div class="col-sm-4" data-toggle="modal" data-target=".boise-modal">
+<div id="homepage-sections" class="clearfix">
+	<div class="col-sm-9 col-sm-offset-2"  data-toggle="modal" data-target=".san-francisco-modal">
+		<img class="img-circle" src="assets/sf_thumb.jpg">
+		<div class="col-xs-10">
+			<h2>San Francisco</h2>
+			<p><a role="button" class="btn btn-primary btn-lg">View Contact Info</a></p>
+		</div>	
+	</div>
+
+
+	<div class="col-sm-9 col-sm-offset-2" data-toggle="modal" data-target=".los-angeles-modal" style="margin-top:125px;">
+		<img class="img-circle" src="assets/la_thumb.jpg">
+		<div class="col-xs-10">
+			<h2>Los Angeles</h2>
+			<p><a role="button" class="btn btn-primary btn-lg">View Contact Info</a></p>
+		</div>	
+	</div>
+
+
+	<div class="col-sm-9 col-sm-offset-2" data-toggle="modal" data-target=".boise-modal" style="margin-top:115px;">
 		<img class="img-circle" src="assets/boise_thumb.jpg">
-		<h3>Boise</h3>
+		<div class="col-xs-10">
+		<h2>Boise</h2>
+		<p><a role="button" class="btn btn-primary btn-lg">View Contact Info</a></p>
 	</div>
-	<!-- Small modal -->
-	<div class="modal fade boise-modal" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title" id="myModalLabel">Boise</h4>
-				</div>
-				<div class="modal-body">
-					info goes here
-				</div>
-			</div>
-		</div>
 	</div>
-	<!-- /small modal -->
 </div>
