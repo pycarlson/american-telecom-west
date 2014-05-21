@@ -5,10 +5,6 @@
 <% @clients.each do |c| %>
   <li class="col-sm-3 col-xs-6">
      <img class="img-responsive" src="<%= c.logo_url %>">
-     <div>
-     	 <h3><%= c.name %></h3>
-      	<p><%= c.tag %></p>
-      </div>
       <%if user_signed_in? && is_admin? %>
       <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
       <%= link_to "Edit", edit_client_path(c), class: "edit_link" %></li>
