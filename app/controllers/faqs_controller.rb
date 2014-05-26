@@ -11,7 +11,7 @@ class FaqsController < ApplicationController
 
   def create
     @faq = Faq.create!(faq_params)
-    redirect_to faqs_path
+    redirect_to admin_path
   end
 
   def edit
@@ -21,7 +21,7 @@ class FaqsController < ApplicationController
   def update
     @faq = Faq.find(params[:id])
     if @faq.update_attributes(faq_params)
-      redirect_to faqs_path
+      redirect_to admin_path
     else
       render :edit
     end
@@ -30,7 +30,7 @@ class FaqsController < ApplicationController
   def destroy
     Faq.destroy(params[:id])
     respond_to do |format|
-      format.html { redirect_to faqs_path }
+      format.html { redirect_to admin_path }
       format.js
     end
   end

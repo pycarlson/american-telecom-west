@@ -7,7 +7,7 @@ class AdditionalServicesController < ApplicationController
 
   def create
     @additional_service = AdditionalService.create!(additional_service_params)
-    redirect_to services_path
+    redirect_to admin_path
   end
 
   def edit
@@ -17,7 +17,7 @@ class AdditionalServicesController < ApplicationController
   def update
     @additional_service = AdditionalService.find(params[:id])
     if @additional_service.update_attributes(additional_service_params)
-      redirect_to services_path
+      redirect_to admin_path
     else
       render :edit
     end
@@ -26,7 +26,7 @@ class AdditionalServicesController < ApplicationController
   def destroy
     AdditionalService.destroy(params[:id])
     respond_to do |format|
-      format.html { redirect_to additional_services_path }
+      format.html { redirect_to admin_path }
       format.js
     end
   end

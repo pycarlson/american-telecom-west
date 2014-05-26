@@ -2,7 +2,8 @@
   <h1>Administrator's Page</h1>
 
   <div class="a-faq">
-    <h2>Frequently Asked Questions</h2>
+    <h2>Frequently Asked Questions <span><%= link_to "add another", new_faq_path %><span></h2>
+
     <ul>
       <% @faqs.each do |faq| %>
       <li class="col-sm-4">
@@ -16,7 +17,7 @@
   </div>
 
   <div class="a-services">
-    <h2>Services</h2>
+    <h2>Services <span><%= link_to "add another", new_service_path %><span></h2>
     <ul>
       <% @services.each do |s| %>
       <li class="col-sm-4">
@@ -29,7 +30,7 @@
   </div>
 
   <div class="a-additional-services">
-    <h2>Additional Services</h2>
+    <h2>Additional Services <span><%= link_to "add another", new_additional_service_path %><span></h2>
     <ul>
       <% @additional_services.each do |as| %>
       <li class="col-sm-4">
@@ -42,7 +43,7 @@
   </div>
 
   <div class="a-clients">
-    <h2>Clients</h2>
+    <h2>Clients <span><%= link_to "add another", new_client_path %><span></h2>
     <ul>
       <% @clients.each do |c| %>
       <li class="col-sm-4">

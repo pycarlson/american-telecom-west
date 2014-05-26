@@ -11,7 +11,7 @@ class ClientsController < ApplicationController
 
   def create
     @client = Client.create!(client_params)
-    redirect_to clients_path
+    redirect_to admin_path
   end
 
   def edit
@@ -21,7 +21,7 @@ class ClientsController < ApplicationController
   def update
     @client = Client.find(params[:id])
     if @client.update_attributes(client_params)
-      redirect_to clients_path
+      redirect_to admin_path
     else
       render :edit
     end
@@ -30,7 +30,7 @@ class ClientsController < ApplicationController
   def destroy
     Client.destroy(params[:id])
     respond_to do |format|
-      format.html { redirect_to clients_path }
+      format.html { redirect_to admin_path }
       format.js
     end
   end

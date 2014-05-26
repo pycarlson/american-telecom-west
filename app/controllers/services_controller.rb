@@ -12,7 +12,7 @@ class ServicesController < ApplicationController
 
   def create
     @service = Service.create!(service_params)
-    redirect_to services_path
+    redirect_to admin_path
   end
 
   def edit
@@ -22,7 +22,7 @@ class ServicesController < ApplicationController
   def update
     @service = Service.find(params[:id])
     if @service.update_attributes(service_params)
-      redirect_to services_path
+      redirect_to admin_path
     else
       render :edit
     end
@@ -31,7 +31,7 @@ class ServicesController < ApplicationController
   def destroy
     Service.destroy(params[:id])
     respond_to do |format|
-      format.html { redirect_to services_path }
+      format.html { redirect_to admin_path }
       format.js
     end
   end
