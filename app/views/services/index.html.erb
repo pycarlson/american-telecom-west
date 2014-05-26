@@ -3,13 +3,7 @@
 <ul class="col-xs-12">
   <% @services.each do |s| %>
   <li>
-    <%= s.description %>
-
-    <%if user_signed_in? && is_admin? %>
-    <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-    <%= link_to "Edit", edit_service_path(s), class: "edit_link" %>
-    <% end %>
-
+    <p><%= s.description %></p>
   </li>
 <% end %>  
 </ul>
@@ -17,13 +11,8 @@
 <h1>Additional Services Provided by American Telecom</h1>
 <ul class="col-xs-12">
   <% @additional_services.each do |as| %>
-  <li><%= as.description %>
-    
-    <%if user_signed_in? && is_admin? %>
-    <%= link_to "Delete", as, method: :delete, class: "delete_link", remote: true %>
-    <%= link_to "Edit", edit_additional_service_path(as), class: "edit_link" %>
-    <% end %>
-
+  <li>
+    <p><%= as.description %></p>
   </li>
 <% end %>
 </ul>

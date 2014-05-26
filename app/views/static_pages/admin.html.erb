@@ -1,0 +1,62 @@
+<div class="container" id="admin-page">
+  <h1>Administrator's Page</h1>
+
+  <div class="a-faq">
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <% @faqs.each do |faq| %>
+      <li class="col-sm-4">
+        <h3><%= faq.question %></h3>
+        <p><%= faq.answer %></p>
+
+        <%= link_to "Delete", faq, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_faq_path(faq), class: "edit_link" %>
+
+      </li>
+      <% end %>
+    </ul %>
+  </div>
+
+  <div class="a-services">
+    <h2>Services</h2>
+    <ul>
+      <% @services.each do |s| %>
+      <li class="col-sm-4">
+        <p><%= s.description %></p>
+        <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_service_path(s), class: "edit_link" %>
+      </li>
+      <% end %>
+    </ul %>
+  </div>
+
+  <div class="a-additional-services">
+    <h2>Additional Services</h2>
+    <ul>
+      <% @additional_services.each do |as| %>
+      <li class="col-sm-4">
+        <p><%= as.description %></p>
+        <%= link_to "Delete", as, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_additional_service_path(as), class: "edit_link" %>
+      </li>
+      <% end %>
+    </ul %>
+  </div>
+
+  <div class="a-clients">
+    <h2>Clients</h2>
+    <ul>
+      <% @clients.each do |c| %>
+      <li class="col-sm-4">
+        <h3><%= c.name %></h3>
+        <p><%= c.tag %></p>
+        <%= image_tag(c.logo_url) %>
+        <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_client_path(c), class: "edit_link" %>
+      </li>
+      <% end %>
+    </ul %>
+  </div>
+
+</div>
+   

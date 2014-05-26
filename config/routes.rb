@@ -11,4 +11,7 @@ AmericanTelecomWest::Application.routes.draw do
 
   resources :faqs
 
+  get '/admin' => 'static_pages#admin'
+  
+
 end
