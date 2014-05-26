@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  before_filter :is_admin?, except: [:home]
   
   def home
   end
