@@ -8,10 +8,8 @@
       <li class="col-sm-4">
         <h3><%= faq.question %></h3>
         <p><%= faq.answer %></p>
-
         <%= link_to "Delete", faq, method: :delete, class: "delete_link", remote: true %>
         <%= link_to "Edit", edit_faq_path(faq), class: "edit_link" %>
-
       </li>
       <% end %>
     </ul %>
@@ -50,7 +48,7 @@
       <li class="col-sm-4">
         <h3><%= c.name %></h3>
         <p><%= c.tag %></p>
-        <%= image_tag(c.logo_url) %>
+        <img src="<%= c.logo_url %>">
         <%= link_to "Delete", c, method: :delete, class: "delete_link", remote: true %>
         <%= link_to "Edit", edit_client_path(c), class: "edit_link" %>
       </li>
