@@ -28,9 +28,7 @@
 
     <%= yield %>
   </div>
-  <%if user_signed_in? && is_admin? %>
-  <%= render 'shared/admin' %>
-  <% end %>
+  
   <div class="footer"></div>
 </body>
 </html>

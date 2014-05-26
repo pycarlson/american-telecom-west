@@ -19,6 +19,16 @@
         <li class="main"><%= link_to "Clients", clients_path, class: cp(clients_path) %></li>
         <li class="main"><%= link_to "FAQ", faqs_path, class: cp(faqs_path) %></li>
         <%if user_signed_in? && is_admin? %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Admin Home", admin_path %></li>
+            <li><%= link_to "Add Services", new_service_path %></li>
+            <li><%= link_to "Add Additional Services", new_additional_service_path %></li>
+            <li><%= link_to "Add Clients", new_client_path %></li>
+            <li><%= link_to "Add FAQ", new_faq_path %></li>
+          </ul>
+        </li>
         <li class="main"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
