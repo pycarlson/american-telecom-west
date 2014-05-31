@@ -8,6 +8,8 @@
     text-align:center !important;
   } 
 
+
+
 }
 
 #homepage-sections > div {
@@ -149,18 +151,36 @@ h1{
   div{padding-left: 20px;}
 }
 
+/* //////////////// location modals ///////////////// */
+
+.modal h3 {
+  background:#FDE547;
+  padding:10px;
+  width: 95%;
+  }
+
+.office-location {
+  border-bottom: 2px dotted #CCCCCC;
+  margin:15px;
+}
+
+.office-location:last-of-type {border-bottom: none;}
+
+
 /* //////////////// customer list page ///////////////// */
 
 #clients-page{
   h1 {padding-left:15px}
+
 }
 
 #customer-list{
   padding-top:25px;
 
+  h3{font-size:18px !important;}
+  p{font-size:12px;}
   
   li{
-    border: solid 1px #E7E7E7;
     height:150px;
     line-height:1.1;
     letter-spacing:.25px;
