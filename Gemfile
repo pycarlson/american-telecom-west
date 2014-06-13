@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'activerecord-tableless', '~> 1.0'
 gem 'google_drive'
 gem 'figaro'
+gem 'rake', '~> 10.3.1'
 
 group :development do
   gem 'sqlite3'
