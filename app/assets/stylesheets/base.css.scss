@@ -1,5 +1,7 @@
 @media (max-width: 610px){
 
+.home-main-div{margin-top:0 !important;}
+
   #homepage-sections{
    img{
     display:block !important;
@@ -122,6 +124,10 @@ h1{
 }
 
 /* //////////////// homepage ///////////////// */
+
+.home-main-div {
+    margin-top:75px;
+}
 
 #homepage-main{
   background: url('/assets/homepageSlide_small.jpg') no-repeat center top;
