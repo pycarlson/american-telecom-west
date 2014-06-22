@@ -1,7 +1,13 @@
 class StaticPagesController < ApplicationController
-  before_filter :is_admin?, except: [:home]
+  before_filter :is_admin?, only: [:admin]
   
   def home
+  end
+
+  def tmetrics
+  end
+
+  def structuredcabling
   end
 
   def admin

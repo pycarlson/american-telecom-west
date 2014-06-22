@@ -12,6 +12,10 @@ AmericanTelecomWest::Application.routes.draw do
   resources :faqs
 
   get '/admin' => 'static_pages#admin'
+
+  get '/tmetrics' => 'static_pages#tmetrics'
+
+  get '/structuredcabling' => 'static_pages#structuredcabling'
   
 
 end
