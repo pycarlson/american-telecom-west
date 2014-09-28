@@ -7,21 +7,21 @@ class CablingServicesController < ApplicationController
   end
 
   def new
-    @service = CablingService.new
+    @cabling_service = CablingService.new
   end
 
   def create
-    @cabling_services = CablingService.create!(cabling_services_params)
+    @cabling_service = CablingService.create!(cabling_service_params)
     redirect_to admin_path
   end
 
   def edit
-    @cabling_services = CablingService.find(params[:id])
+    @cabling_service = CablingService.find(params[:id])
   end
 
   def update
-    @cabling_services = CablingService.find(params[:id])
-    if @cabling_services.update_attributes(cabling_services_params)
+    @cabling_service = CablingService.find(params[:id])
+    if @cabling_service.update_attributes(cabling_service_params)
       redirect_to admin_path
     else
       render :edit
@@ -29,7 +29,8 @@ class CablingServicesController < ApplicationController
   end
 
   def destroy
-    cabling_services.destroy(params[:id])
+    cabling_service = CablingService.find(params[:id])
+    cabling_service.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js
@@ -38,7 +39,7 @@ class CablingServicesController < ApplicationController
 
   private
 
-  def cabling_services_params
+  def cabling_service_params
     params.require(:cabling_services).permit(:description)
   end
 end 

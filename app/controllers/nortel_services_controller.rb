@@ -7,21 +7,21 @@ class NortelServicesController < ApplicationController
   end
 
   def new
-    @service = NortelService.new
+    @nortel_service = NortelService.new
   end
 
   def create
-    @nortel_services = NortelService.create!(nortel_services_params)
+    @nortel_service = NortelService.create!(nortel_services_params)
     redirect_to admin_path
   end
 
   def edit
-    @nortel_services = NortelService.find(params[:id])
+    @nortel_service = NortelService.find(params[:id])
   end
 
   def update
-    @nortel_services = NortelService.find(params[:id])
-    if @nortel_services.update_attributes(nortel_services_params)
+    @nortel_service = NortelService.find(params[:id])
+    if @nortel_service.update_attributes(nortel_services_params)
       redirect_to admin_path
     else
       render :edit
@@ -29,7 +29,8 @@ class NortelServicesController < ApplicationController
   end
 
   def destroy
-    nortel_services.destroy(params[:id])
+    nortel_service = NortelService.find(params[:id])
+    nortel_service.destroy(params[:id])
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js
