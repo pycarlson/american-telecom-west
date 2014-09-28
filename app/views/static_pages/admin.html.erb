@@ -17,26 +17,52 @@
   </div>
 
   <div class="a-services">
-    <h2>Services <span><%= link_to "add another", new_service_path %><span></h2>
+    <h2>Nortel Services <span><%= link_to "add another", new_nortel_service_path %><span></h2>
     <ul>
-      <% @services.each do |s| %>
+      <% @nortel_services.each do |s| %>
       <li class="col-sm-4">
         <p><%= s.description %></p>
         <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
-        <%= link_to "Edit", edit_service_path(s), class: "edit_link" %>
+        <%= link_to "Edit", edit_nortel_service_path(s), class: "edit_link" %>
       </li>
       <% end %>
     </ul %>
   </div>
 
   <div class="a-additional-services">
-    <h2>Additional Services <span><%= link_to "add another", new_additional_service_path %><span></h2>
+    <h2>Additional Nortel Services <span><%= link_to "add another", new_nortel_add_serv_path %><span></h2>
     <ul>
-      <% @additional_services.each do |as| %>
+      <% @nortel_add_servs.each do |as| %>
       <li class="col-sm-4">
         <p><%= as.description %></p>
         <%= link_to "Delete", as, method: :delete, class: "delete_link", remote: true %>
-        <%= link_to "Edit", edit_additional_service_path(as), class: "edit_link" %>
+        <%= link_to "Edit", edit_nortel_add_serv_path(as), class: "edit_link" %>
+      </li>
+      <% end %>
+    </ul %>
+  </div>
+
+  <div class="a-services">
+    <h2>Cabling Services <span><%= link_to "add another", new_cabling_service_path %><span></h2>
+    <ul>
+      <% @cabling_services.each do |s| %>
+      <li class="col-sm-4">
+        <p><%= s.description %></p>
+        <%= link_to "Delete", s, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_cabling_service_path(s), class: "edit_link" %>
+      </li>
+      <% end %>
+    </ul %>
+  </div>
+
+  <div class="a-additional-services">
+    <h2>Additional Cabling Services <span><%= link_to "add another", new_cabling_add_serv_path %><span></h2>
+    <ul>
+      <% @cabling_add_servs.each do |as| %>
+      <li class="col-sm-4">
+        <p><%= as.description %></p>
+        <%= link_to "Delete", as, method: :delete, class: "delete_link", remote: true %>
+        <%= link_to "Edit", edit_cabling_add_serv_path(as), class: "edit_link" %>
       </li>
       <% end %>
     </ul %>
