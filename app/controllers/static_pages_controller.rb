@@ -7,6 +7,9 @@ class StaticPagesController < ApplicationController
   def tmetrics
   end
 
+  def nortel
+  end
+
   def structuredcabling
   end
 

@@ -94,11 +94,14 @@ ul li {
 
 /* //////////////// footer ///////////////// */
 footer{
+background: #cdcfcf;
+padding: 15px 0 1px 0;
   
   p{
-    color: #8F8F8F;
-    font-size: 11px;
-    text-align:center;
+color: #666;
+font-size: 12px;
+text-align: center;
+font-weight: bold;
   }
 }
 
@@ -212,6 +215,12 @@ h1{
 
     img{max-height:150px;}
   }
+}
+
+/* //////////////// individual services page ///////////////// */
+
+.bullet-list li {
+  list-style:inherit;
 }
 
 /* //////////////// services/faq pages ///////////////// */

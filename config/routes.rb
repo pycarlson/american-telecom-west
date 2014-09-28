@@ -16,6 +16,8 @@ AmericanTelecomWest::Application.routes.draw do
   get '/tmetrics' => 'static_pages#tmetrics'
 
   get '/structuredcabling' => 'static_pages#structuredcabling'
+
+    get '/nortel' => 'static_pages#nortel'
   
 
 end
