@@ -11,9 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508003345) do
+ActiveRecord::Schema.define(version: 20140928172122) do
 
-  create_table "additional_services", force: true do |t|
+  create_table "cabling_add_servs", force: true do |t|
+    t.text "description"
+  end
+
+  create_table "cabling_services", force: true do |t|
     t.text "description"
   end
 
@@ -28,7 +32,11 @@ ActiveRecord::Schema.define(version: 20140508003345) do
     t.text   "answer"
   end
 
-  create_table "services", force: true do |t|
+  create_table "nortel_add_servs", force: true do |t|
+    t.text "description"
+  end
+
+  create_table "nortel_services", force: true do |t|
     t.text "description"
   end
 

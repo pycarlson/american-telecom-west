@@ -15,8 +15,10 @@ class StaticPagesController < ApplicationController
 
   def admin
     @faqs = Faq.all
-    @services = Service.all
-    @additional_services = AdditionalService.all
+    @nortel_services = NortelService.all
+    @cabling_services = CablingService.all
+    @nortel_add_servs = NortelAddServ.all
+    @cabling_add_servs = CablingAddServ.all
     @clients = Client.all
   end
 
