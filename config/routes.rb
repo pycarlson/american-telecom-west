@@ -7,6 +7,7 @@ AmericanTelecomWest::Application.routes.draw do
   resources :nortel_services
   resources :cabling_add_servs
   resources :nortel_add_servs
+  resources :addons
   resources :clients
   resources :faqs
 

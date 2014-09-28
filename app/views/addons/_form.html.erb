@@ -1,0 +1,12 @@
+<%= form_for @addon do |f| %>
+<div class="form-inline">
+  <div class="form-group col-xs-12">
+    <%= f.text_field :nortel_intro, class: "form-control", placeholder: "Add Nortel intro here" %>
+    <%= f.text_field :nortel_conclusion, class: "form-control", placeholder: "Add Nortel conclusion here" %>
+    <%= f.text_field :cabling_intro, class: "form-control", placeholder: "Add Cabling intro here" %>
+    <%= f.text_field :cabling_conclusion, class: "form-control", placeholder: "Add Cabling conclusion here" %>
+  </div>
+</div>
+<%= f.submit class: "btn btn-primary" %>
+
+<% end %>

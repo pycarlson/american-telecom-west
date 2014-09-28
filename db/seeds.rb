@@ -1,32 +1,23 @@
 #encoding: utf-8
 
-CablingService.create!(description: "Complete turnkey PBX and voicemailsystem installations")
-CablingService.create!(description: "Comprehensive and flexible 24 by 7 maintenance contracts")
-CablingService.create!(description: "Reliable Remote 24 by 7 system monitoring and repair")
-CablingService.create!(description: "Daily Move/Add/Change and operational support")
-CablingService.create!(description: "System upgrades, capacity management and expansions")
-CablingService.create!(description: "Effective problem management and resolution")
+CablingService.create!(description: "Complete turnkey cable installations of both Cat 5e and Cat 6 solutions")
+CablingService.create!(description: "Comprehensive testing and reporting capabilities")
+CablingService.create!(description: "Lifetime Guarantees for your cabling installation")
 CablingService.create!(description: "Efficient project management and implementation of large scale corporate installations, moves and other Telecommunications Projects")
-CablingService.create!(description: "Complete ACD Call Center design, implementation and support")
+CablingService.create!(description: "Fiber Optic installation and troubleshooting")
 CablingService.create!(description: "Tenacious carrier coordination and vendor management")
-CablingService.create!(description: "Strategic converged network planning, implementation and support, including VoIP technologies, audio/video teleconferencing, wireless solutions and unified messaging")
-CablingService.create!(description: "Toll fraud and security auditing, analysis and optimization")
 
-CablingAddServ.create!(description: "Telecommunications RFP development, analysis and vendor selection")
-CablingAddServ.create!(description: "Asset Disposal and financial recovery services")
-CablingAddServ.create!(description: "Carrier billing audit and cost recovery")
-CablingAddServ.create!(description: "Best of class carrier rate and term benchmarking")
+CablingAddServ.create!(description: "Troubleshooting of carrier cabling and extended D-Marks")
+CablingAddServ.create!(description: "Troubleshooting of your legacy equipment")
+CablingAddServ.create!(description: "All analog services which may not be supported by your VOIP vendor")
 CablingAddServ.create!(description: "Carrier contract analysis, evaluation and negotiation")
-CablingAddServ.create!(description: "Uptime availability and reliability analysis, evaluation and optimization solution implementation")
 CablingAddServ.create!(description: "Disaster Recovery analysis evaluation and solution implementation")
-CablingAddServ.create!(description: "Call Detail Recording data collection and reporting")
 
-NortelService.create!(description: "Complete turnkey PBX and voicemailsystem installations")
+NortelService.create!(description: "Complete turnkey PBX and voicemail system installations")
 NortelService.create!(description: "Comprehensive and flexible 24 by 7 maintenance contracts")
 NortelService.create!(description: "Reliable Remote 24 by 7 system monitoring and repair")
 NortelService.create!(description: "Daily Move/Add/Change and operational support")
-NortelService.create!(description: "System upgrades, capacity management and expansions")
-NortelService.create!(description: "Effective problem management and resolution")
+NortelService.create!(description: "Effective problem management and resolutions")
 NortelService.create!(description: "Efficient project management and implementation of large scale corporate installations, moves and other Telecommunications Projects")
 NortelService.create!(description: "Complete ACD Call Center design, implementation and support")
 NortelService.create!(description: "Tenacious carrier coordination and vendor management")
@@ -41,6 +32,11 @@ NortelAddServ.create!(description: "Carrier contract analysis, evaluation and ne
 NortelAddServ.create!(description: "Uptime availability and reliability analysis, evaluation and optimization solution implementation")
 NortelAddServ.create!(description: "Disaster Recovery analysis evaluation and solution implementation")
 NortelAddServ.create!(description: "Call Detail Recording data collection and reporting")
+
+Addon.create!(nortel_intro: "American Telecom West has been providing Nortel Legacy solutions for medium and large businesses for over 25 years, both domestically and abroad. The services that we offer allow our clients allow them to protect their existing infrastructure for the foreseeable future. Our highly skilled and certified personnel can provide expert installation and maintenance services on all Nortel Networks Meridian equipment including Meridian 1 PBX, Meridian Mail, Call Pilot and Symposium. In addition, we offer expert service on Avaya Octel voice processing equipment.", 
+              nortel_conclusion: "American Telecom West works aggressively to offer telecommunications solutions that are driven by your business goals and needs. Our goal is to deliver effective and cost efficient solutions that meet timelines and budgets in line with your business plan. We have both the expertise and the experience to take on the detailed coordination of your upcoming telecom projects and deliver best of class service to keep your voice network infrastructure robust and performing efficiently. Call us today to see if we can help you with your telecommunication needs. We look forward to partnering with you.", 
+              cabling_intro: "American Telecom West has been providing telecommunications solutions for medium and large businesses for over 25 years, both domestically and abroad. Our expertise includes structured cabling and assistance on legacy equipment.", 
+              cabling_conclusion: "American Telecom West works aggressively to offer structured cabling solutions that are driven by your business goals and needs. Our goal is to deliver effective and cost efficient solutions that meet timelines and budgets in line with your business plan. We have both the expertise and the experience to take on the detailed coordination of your upcoming telecom projects and deliver best of class service to keep your voice network infrastructure robust and performing efficiently. Contact us today to see if we can help you with your telecommunication needs. We look forward to partnering with you.")
 
 Client.create!(name: "1-800-RADIATOR", logo_url: "http://americantelecomwest.com/extras/radiator.com.jpg", tag: "Leader in Auto Radiator Sales")
 Client.create!(name: "C & H Sugar", logo_url: "http://americantelecomwest.com/chlogo.gif", tag: "Food Processing Corporation")

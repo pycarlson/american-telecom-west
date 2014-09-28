@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140928172122) do
+ActiveRecord::Schema.define(version: 20140928191000) do
+
+  create_table "addons", force: true do |t|
+    t.text "nortel_intro"
+    t.text "nortel_conclusion"
+    t.text "cabling_intro"
+    t.text "cabling_conclusion"
+  end
 
   create_table "cabling_add_servs", force: true do |t|
     t.text "description"
