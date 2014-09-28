@@ -14,18 +14,21 @@
 
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right">
-        <li class="main"><%= link_to "Services", services_path, class: cp(services_path) %></li>
+        <li class="main"><%= link_to "Nortel Services", nortel_services_path, class: cp(nortel_services_path) %></li>
+        <li class="main"><%= link_to "Structured Cabling", structuredcabling_path, class: cp(structuredcabling_path) %></li>
+        
         <li class="main"><%= link_to "Clients", clients_path, class: cp(clients_path) %></li>
         <li class="main"><%= link_to "FAQ", faqs_path, class: cp(faqs_path) %></li>
-        <li class="main"><%= link_to "Structured Cabling", structuredcabling_path, class: cp(structuredcabling_path) %></li>
         <li class="main"><%= link_to "T-Metrics", tmetrics_path, class: cp(tmetrics_path) %></li>
         <%if user_signed_in? && is_admin? %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Admin Home", admin_path %></li>
-            <li><%= link_to "Add Services", new_service_path %></li>
-            <li><%= link_to "Add Additional Services", new_additional_service_path %></li>
+            <li><%= link_to "Add Cabling Service", new_cabling_service_path %></li>
+            <li><%= link_to "Add Additional Cabling Service", new_cabling_add_serv_path %></li>
+            <li><%= link_to "Add Nortel Service", new_nortel_service_path %></li>
+            <li><%= link_to "Add Additional Nortel Service", new_nortel_add_serv_path %></li>
             <li><%= link_to "Add Clients", new_client_path %></li>
             <li><%= link_to "Add FAQ", new_faq_path %></li>
           </ul>
