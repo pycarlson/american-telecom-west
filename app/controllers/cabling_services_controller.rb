@@ -30,7 +30,7 @@ class CablingServicesController < ApplicationController
 
   def destroy
     cabling_service = CablingService.find(params[:id])
-    cabling_service.destroy(params[:id])
+    cabling_service.destroy
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js
@@ -40,6 +40,6 @@ class CablingServicesController < ApplicationController
   private
 
   def cabling_service_params
-    params.require(:cabling_services).permit(:description)
+    params.require(:cabling_service).permit(:description)
   end
 end 

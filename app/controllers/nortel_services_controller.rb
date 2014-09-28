@@ -30,7 +30,7 @@ class NortelServicesController < ApplicationController
 
   def destroy
     nortel_service = NortelService.find(params[:id])
-    nortel_service.destroy(params[:id])
+    nortel_service.destroy
     respond_to do |format|
       format.html { redirect_to admin_path }
       format.js
@@ -40,6 +40,6 @@ class NortelServicesController < ApplicationController
   private
 
   def nortel_services_params
-    params.require(:nortel_services).permit(:description)
+    params.require(:nortel_service).permit(:description)
   end
 end 

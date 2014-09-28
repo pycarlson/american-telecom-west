@@ -15,7 +15,6 @@ class AddonsController < ApplicationController
   end
 
   def update
-    p params
     @addon = Addon.find(params[:id])
     if @addon.update_attributes(addon_params)
       redirect_to admin_path
