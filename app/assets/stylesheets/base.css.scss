@@ -144,9 +144,11 @@ h1{
   margin-bottom:0;
 }
 
+
 #homepage-sections{
   height:575px;
   background: url('/assets/homepage_background.png') no-repeat center center;
+  margin-top:-10px;
 
   h2{
     color: #FFFFFF;
@@ -174,6 +176,14 @@ h1{
 #home-buttons{
   p{display:inline-block;}
   a {padding:15px 30px;}
+}
+
+.home-banner{
+text-align:center;
+margin-top:5px;
+h3{font-size:20px;}
+  h3, img {display:inline-block; padding-right:10px;}
+  img{max-width:250px}
 }
 
 /* //////////////// location modals ///////////////// */
