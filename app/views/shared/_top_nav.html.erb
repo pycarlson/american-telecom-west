@@ -14,12 +14,23 @@
 
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav pull-right">
-        <li class="main"><%= link_to "Nortel Services", nortel_services_path, class: cp(nortel_services_path) %></li>
-        <li class="main"><%= link_to "Structured Cabling", structuredcabling_path, class: cp(structuredcabling_path) %></li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+             <li class="main"><%= link_to "Nortel Services", nortel_services_path, class: cp(nortel_services_path) %></li>
+             <li class="main"><%= link_to "Structured Cabling", cabling_services_path, class: cp(cabling_services_path) %></li>
+          </ul>
+        </li>
+       
         
         <li class="main"><%= link_to "Clients", clients_path, class: cp(clients_path) %></li>
         <li class="main"><%= link_to "FAQ", faqs_path, class: cp(faqs_path) %></li>
+           <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners <b class="caret"></b></a>
+          <ul class="dropdown-menu">
         <li class="main"><%= link_to "T-Metrics", tmetrics_path, class: cp(tmetrics_path) %></li>
+      </ul>
+    </li>
         <%if user_signed_in? && is_admin? %>
         <li class="dropdown">
          <%= link_to "Admin Panel", admin_path %>

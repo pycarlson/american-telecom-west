@@ -215,8 +215,20 @@ h1{
 }
 
 /* //////////////// services/faq pages ///////////////// */
+#services-page {
+h3 {margin-top: 0;}
 
-#services-page, #faq-page{
+ul {
+  margin: 0 0 15px 15px;
+   li {
+   list-style:inherit;
+   line-height:1.4em;
+   padding:3px 0;
+   }
+  }
+
+ }
+ #faq-page{
   h3 {
     margin-top: 0;
   }

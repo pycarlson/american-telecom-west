@@ -1,21 +1,31 @@
 <div class="container" id="services-page">
-<h1>Nortel Services Provided by American Telecom</h1>
+<h1>Nortel Legacy Solutions</h1>
 <ul class="col-xs-12">
   <% @nortel_services.each do |s| %>
   <li>
-    <p><%= s.description %></p>
+    <%= s.description %>
   </li>
 <% end %>  
 </ul>
 
-<h1>Additional Nortel Services Provided by American Telecom</h1>
+<h1>Additional Nortel Legacy Solutions</h1>
 <ul class="col-xs-12">
   <% @additional_services.each do |as| %>
   <li>
-    <p><%= as.description %></p>
+   <%= as.description %>
   </li>
 <% end %>
 </ul>
 
+
+ <br><br>
+    Respectfully,
+    <br><br>
+    <p>
+      Joseph P. Feller<br>
+      President<br>
+      American Telecom West, Inc.<br>
+      joe@americantelecomwest.com<br>
+    </p>
 </div>
 
