@@ -1,5 +1,8 @@
 <div class="container" id="services-page">
 <h1>Structured Cabling Services</h1>
+
+<%= Addon.first.cabling_intro %><br><br>
+
 <ul class="col-xs-12">
   <% @cabling_services.each do |s| %>
   <li>
@@ -17,6 +20,7 @@
 <% end %>
 </ul>
 
+<%= Addon.first.cabling_conclusion %>
 
  <br><br>
     Respectfully,
