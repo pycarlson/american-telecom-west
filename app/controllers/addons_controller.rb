@@ -6,7 +6,7 @@ class AddonsController < ApplicationController
   end
 
   def create
-    @addon = Addon.create!(addons_params)
+    @addon = Addon.create!(addon_params)
     redirect_to admin_path
   end
 
@@ -16,7 +16,7 @@ class AddonsController < ApplicationController
 
   def update
     @addon = Addon.find(params[:id])
-    if @addon.update_attributes(addons_params)
+    if @addon.update_attributes(addon_params)
       redirect_to admin_path
     else
       render :edit
@@ -33,8 +33,8 @@ class AddonsController < ApplicationController
 
   private
 
-  def faq_params
-    params.require(:addons).permit(:nortel_intro, :nortel_conclusion, :cabling_intro, :cabling_conclusion)
+  def addon_params
+    params.require(:addon).permit(:nortel_intro, :nortel_conclusion, :cabling_intro, :cabling_conclusion)
   end
 
 end 

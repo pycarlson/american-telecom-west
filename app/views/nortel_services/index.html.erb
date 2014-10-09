@@ -1,6 +1,6 @@
 <div class="container" id="services-page">
 <h1>Nortel Legacy Solutions</h1>
-<%= Addon.first.nortel_intro %><br><br>
+<%= Addon.first.nortel_intro.html_safe %><br><br>
 
 <ul class="col-xs-12">
   <% @nortel_services.each do |s| %>
@@ -19,7 +19,7 @@
 <% end %>
 </ul>
 
-<%= Addon.first.nortel_conclusion %><br><br>
+<%= Addon.first.nortel_conclusion.html_safe %><br><br>
 
  <br><br>
     Respectfully,

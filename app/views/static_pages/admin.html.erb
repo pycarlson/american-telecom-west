@@ -16,6 +16,28 @@
     </ul %>
   </div>
 
+  <div class="addons">
+    <h2>Intros and Conclusions <span><%= link_to "edit", edit_addon_path(@addon) %></span></h2>
+    <ul>
+      <li class="col-sm-12">
+        <h3>Nortel Intro</h3>
+        <p><%= @addon.nortel_intro %></p>
+      </li>
+      <li class="col-sm-12">
+        <h3>Nortel Conclusion</h3>
+        <p><%= @addon.nortel_conclusion %></p>
+      </li>
+      <li class="col-sm-12">
+        <h3>Cabling Intro</h3>
+        <p><%= @addon.cabling_intro %></p>
+      </li>
+      <li class="col-sm-12">
+        <h3>Cabling Conclusion</h3>
+        <p><%= @addon.cabling_conclusion %></p>
+      </li>
+    </ul %>
+  </div>
+
   <div class="a-services">
     <h2>Nortel Services <span><%= link_to "add another", new_nortel_service_path %><span></h2>
     <ul>

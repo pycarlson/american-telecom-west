@@ -19,6 +19,7 @@ class StaticPagesController < ApplicationController
     @cabling_services = CablingService.all
     @nortel_add_servs = NortelAddServ.all
     @cabling_add_servs = CablingAddServ.all
+    @addon = Addon.first
     @clients = Client.all
   end
 
